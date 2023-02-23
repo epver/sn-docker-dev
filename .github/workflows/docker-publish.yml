@@ -30,4 +30,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_PASSWORD }}/sn-docker-dev:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/sn-docker-dev:latest
