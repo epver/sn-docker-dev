@@ -2,7 +2,10 @@ name: Build and push Docker images
 
 on:
   workflow_dispatch:
-
+  
+env:
+  DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
+  DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
 jobs:
 
   build:
@@ -12,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: echo '${{DOCKERHUB_TOKEN}}'
+      run: echo '$DOCKERHUB_USERNAME'
